@@ -1,9 +1,5 @@
 ### VDO การทำงาน
-```
 https://drive.google.com/file/d/1r-MIykVDODjUtyFnOckVh3XZzUZ2J5y6/view?usp=share_link
-```
-
-
 
 ### Clone
 
