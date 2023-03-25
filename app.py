@@ -22,6 +22,10 @@ st.header("Edge Detection 👏")
 
 st.write("This is my first app")
 
+firstName = st.text_input('ENTER YOUR FIRST NAME')
+surname = st.text_input('ENTER YOUR SURNAME')
+number = st.text_input('ENTER YOUR NUMBER')
+
 uploaded_file = st.file_uploader("Choose a image file", type=['jpg', 'png', 'jpeg'])
 if uploaded_file is not None:
     with open(os.path.join("Img", uploaded_file.name),"wb") as f:
@@ -40,9 +44,9 @@ if st.button("submit"):
 
         payload = {
             "image": image_string,
-            "name": "John",
-            "surname": "Doe",
-            "numbers": [1, 2, 3, 4, 5]
+            "name": firstName,
+            "surname": surname,
+            "number": number
         }
 
         response = requests.post(f"{url}/process-image", json=payload)
@@ -67,3 +71,7 @@ if st.button("submit"):
 
         # Show the plot
         st.pyplot(fig)
+        
+        st.write("Your input here 👇")
+        st.write("Your Name : " + data["name"] + " " + data["surname"])
+        st.write("Your Number : " + data["number"])
