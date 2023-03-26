@@ -1,6 +1,12 @@
 ### VDO การทำงาน ใช้ (Streamlit + FastAPI)
 https://drive.google.com/drive/folders/1dIkV1kPksYA_HbBPqniS3AebmYknrwMs?usp=share_link
 
+### Run Frontend
+
+```
+streamlit run app.py
+```
+
 ### Clone
 
 ```
